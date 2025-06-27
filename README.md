@@ -1,5 +1,19 @@
 # Sistema Distribuído em Python
 
+### Configuração do Ambiente
+
+É recomendado o uso de um ambiente virtual para isolar as dependências do projeto.
+
+1.  **Crie o ambiente virtual:**
+    ```
+    python -m venv venv
+    ```
+
+2.  **Ative o ambiente virtual:**
+    ```
+    venv\Scripts\activate
+    ```
+
 Este projeto implementa um sistema distribuído simples usando Python, demonstrando conceitos fundamentais de sistemas distribuídos como comunicação entre processos, arquitetura cliente-servidor, processamento paralelo e distribuição de tarefas.
 
 ## Arquitetura do Sistema
