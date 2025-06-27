@@ -138,16 +138,62 @@ O cliente de tarefas permite que usuários:
    - Submeta uma tarefa: `/calculate Worker-1234 sum 10 20 30 40`
    - Verifique o resultado quando a tarefa for concluída
 
+## Interface Gráfica
+
+O sistema inclui uma interface gráfica que facilita a interação com todos os componentes do sistema distribuído. A interface foi desenvolvida usando Tkinter e oferece as seguintes funcionalidades:
+
+### Características da Interface Gráfica
+
+- **Conexão Simplificada**: Interface para conectar-se como cliente de comunicação, cliente de tarefas ou trabalhador.
+- **Visualização de Mensagens**: Exibição de mensagens recebidas e enviadas em tempo real.
+- **Envio de Mensagens**: Interface para enviar mensagens de broadcast e mensagens diretas.
+- **Submissão de Tarefas**: Interface para selecionar trabalhadores, tipos de tarefas e parâmetros.
+- **Visualização de Resultados**: Exibição dos resultados das tarefas processadas.
+- **Monitoramento de Trabalhadores**: Visualização do status e atividades dos trabalhadores.
+
+### Como Executar a Interface Gráfica
+
+Para iniciar a interface gráfica, execute:
+
+```
+python gui_app.py
+```
+
+A interface gráfica permite:
+1. Conectar-se ao servidor como cliente, cliente de tarefas ou trabalhador
+2. Visualizar e enviar mensagens
+3. Submeter tarefas para processamento
+4. Monitorar o processamento de tarefas
+5. Visualizar resultados de tarefas
+
+## Persistência de Dados
+
+O sistema implementa persistência de dados usando SQLite, permitindo que informações sejam armazenadas mesmo quando o servidor é reiniciado.
+
+### Dados Persistidos
+
+- **Clientes**: Informações sobre clientes conectados, incluindo nome, tipo e status.
+- **Mensagens**: Histórico de mensagens trocadas no sistema, incluindo mensagens de broadcast e diretas.
+- **Tarefas**: Informações sobre tarefas submetidas, incluindo tipo, parâmetros, status e resultados.
+
+### Banco de Dados
+
+O banco de dados SQLite é gerenciado pelo módulo `db_manager.py`, que fornece uma interface para:
+- Registrar e gerenciar clientes
+- Armazenar e recuperar mensagens
+- Armazenar informações sobre tarefas e seus resultados
+
+O banco de dados é criado automaticamente quando o servidor é iniciado e não requer configuração adicional.
+
 ## Extensões Possíveis
 
-O sistema pode ser estendido de várias maneiras:
+O sistema ainda pode ser estendido de várias maneiras:
 
-1. **Interface Gráfica**: Adicionar uma interface gráfica para facilitar a interação com o sistema.
-2. **Persistência de Dados**: Implementar armazenamento de mensagens e resultados de tarefas.
-3. **Autenticação e Segurança**: Adicionar mecanismos de autenticação e criptografia.
-4. **Balanceamento de Carga Automático**: Implementar distribuição automática de tarefas baseada na carga dos trabalhadores.
-5. **Descoberta de Serviços**: Permitir que trabalhadores se registrem automaticamente no sistema.
-6. **Replicação de Servidor**: Implementar múltiplos servidores para aumentar a disponibilidade.
+1. **Autenticação e Segurança**: Adicionar mecanismos de autenticação e criptografia.
+2. **Balanceamento de Carga Automático**: Implementar distribuição automática de tarefas baseada na carga dos trabalhadores.
+3. **Descoberta de Serviços**: Permitir que trabalhadores se registrem automaticamente no sistema.
+4. **Replicação de Servidor**: Implementar múltiplos servidores para aumentar a disponibilidade.
+5. **Visualização de Estatísticas**: Adicionar gráficos e estatísticas sobre o uso do sistema.
 
 ## Conclusão
 
