@@ -2,7 +2,7 @@
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
     <data-source source="LOCAL" name="distributed_system" uuid="7bd6ba07-d2b5-4527-929b-3ea3be6d5414">
-      <driver-ref>sqlite.xerial</driver-ref>
+      <driver-ref>726a5ba4-3d5b-44e5-b710-3e7af415d3d7</driver-ref>
       <synchronize>true</synchronize>
       <jdbc-driver>org.sqlite.JDBC</jdbc-driver>
       <jdbc-url>jdbc:sqlite:E:\Pycharm\SistemasDistribuidos\distributed_system.db</jdbc-url>
